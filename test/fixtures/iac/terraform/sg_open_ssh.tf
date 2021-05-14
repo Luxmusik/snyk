@@ -2,6 +2,7 @@ resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
   description = "Allow SSH inbound from anywhere"
   vpc_id      = "${aws_vpc.main.id}"
+  tags        = "hello"
 
   ingress {
     from_port   = 22
